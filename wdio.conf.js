@@ -292,4 +292,11 @@ exports.config = {
     */
     // afterAssertion: function(params) {
     // }
+    //Reports will be triggered after E2E checks finish. It will export the results into a reports folder together with a Junit XML
+    reporters: [['junit', {
+        outputDir: './reports/e2e-report/',
+        outputFileFormat: function (options) {
+            return 'junit-report.xml'
+        }
+    }]]
 }

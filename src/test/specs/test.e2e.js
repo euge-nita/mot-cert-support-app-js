@@ -10,7 +10,7 @@ describe('My Login application', () => {
         await $('button[type="submit"]').click()
 
         await expect($('#flash')).toBeExisting()
-        await expect($('#flash')).toHaveTextContaining(
+        await expect($('#flash')).toHaveText(
             'You logged into a secure area!')
     })
 })
